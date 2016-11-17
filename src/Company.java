@@ -3,5 +3,13 @@
  */
 public class Company {
 
+    private String name;
+    private String county;
+
+    public Company()
+        {
+            
+        }
+
     //attributes to be added
 }
