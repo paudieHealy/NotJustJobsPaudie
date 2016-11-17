@@ -1,6 +1,8 @@
 public class Register {
 
     private String name;
+    private String companyName;
+    private double companyRate;
     private String county;
     private int age;
     private String username;
@@ -9,15 +11,20 @@ public class Register {
     public Register()
         {
             this.name = "Joe Bloggs";
+            this.companyName = "New Company";
+            this.companyRate = 0.00;
             this.county = "Dublin";
             this.age = 16;
             this.username = "username";
             this.password = "password";
         }
 
-    public Register(String name,String county, int age, String username, String password)
+    public Register(String name, String companyName, double companyRate, String county,
+                    int age, String username, String password)
         {
             this.name = name;
+            this.companyName = companyName;
+            this.companyRate = companyRate;
             this.county = county;
             this.age = age;
             this.username = username;
@@ -27,6 +34,16 @@ public class Register {
     public String getName()
         {
             return name;
+        }
+
+    public String getCompanyName()
+        {
+            return companyName;
+        }
+
+    public double getCompanyRate()
+        {
+            return companyRate;
         }
 
     public String county()
@@ -52,6 +69,16 @@ public class Register {
     public void setName(String name)
         {
             this.name = name;
+        }
+
+    public void setCompanyName(String companyName)
+        {
+            this.companyName = companyName;
+        }
+
+    public void setCompanyRate(double companyRate)
+        {
+            this.companyRate = companyRate;
         }
 
     public void setCounty(String county)
