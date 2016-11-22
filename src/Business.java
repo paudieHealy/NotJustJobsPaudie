@@ -1,18 +1,15 @@
-/**
- * Created by paudie on 17/11/2016.
- */
-public class Business {
+public class Business extends Member{
 
     private String companyName;
-    private Register register;
+    private Member member;
     private double companyRate;
 
     public Business(String companyName,String name, String county,
                     String username, String password)
-        {
-            setCompanyName(companyName);
-            setRegister(new Register(name,county,username,password));
-        }
+    {
+        super(name,county,username,password);
+        setCompanyName(companyName);
+    }
 
     public String getCompanyName()
     {
@@ -24,19 +21,19 @@ public class Business {
         this.companyName = companyName;
     }
 
-    public Register getRegister()
+    public Member getMember()
     {
-        return register;
+        return member;
     }
 
-    public void setRegister(Register register)
+    public void setMember(Member member)
     {
-        this.register = register;
+        this.member = member;
     }
 
     public String toString()
-        {
-            return "\nCompany Name: " + getCompanyName() + register.toString();
-        }
+    {
+        return "\nCompany Name: " + getCompanyName() + member.toString();
+    }
 
 }
