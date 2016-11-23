@@ -4,8 +4,9 @@ import javax.swing.*;
 public class RegisterMember {
 
     public RegisterMember()
+            
     {
-        Set<Member> member = new TreeSet<Member>();
+        List<Member> member = new ArrayList<Member>();
 
         while(JOptionPane.showConfirmDialog(null,"Add a member type ?") == JOptionPane.YES_OPTION)
         {
@@ -19,6 +20,10 @@ public class RegisterMember {
             {
                 Business bus = addBusiness();
                 member.add(bus);
+            }
+            else
+            {
+                JOptionPane.showConfirmDialog(null,"Please enter M or B");
             }
         }
 
