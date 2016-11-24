@@ -4,6 +4,7 @@ public class Member {
     private String county;
     private String username;
     private String password;
+    private int yearOfBirth;
 
     public Member()
     {
@@ -11,15 +12,17 @@ public class Member {
         this.county = "Dublin";
         this.username = "username";
         this.password = "password";
+        this.yearOfBirth = 2000;
     }
 
     public Member(String name, String county,
-                  String username, String password)
+                  String username, String password, int yearOfBirth)
         {
             setName(name);
             setCounty(county);
             setUsername(username);
             setPassword(password);
+            setYearOfBirth(yearOfBirth);
 
         }
 
@@ -63,12 +66,17 @@ public class Member {
         this.password = password;
     }
 
+    public int getYearOfBirth() { return yearOfBirth; }
+
+    public void setYearOfBirth(int yearOfBirth) {this.yearOfBirth = yearOfBirth; }
+
 
 
     public String toString()
         {
             return "\nName: " + getName() + "\nCounty: " + getCounty() +
-                    "\nUsernaem: " + getUsername() + "Password: " + getPassword();
+                    "\nUsernaem: " + getUsername() + "Password: " + getPassword() +
+                    "\nYear of birth: " + getYearOfBirth();
         }
 
 }
