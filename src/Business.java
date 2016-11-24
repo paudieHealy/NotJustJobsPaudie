@@ -5,9 +5,9 @@ public class Business extends Member{
     private double companyRate;
 
     public Business(String companyName,String name, String county,
-                    String username, String password)
+                    String username, String password, int yearOfBirth)
     {
-        super(name,county,username,password);
+        super(name,county,username,password, yearOfBirth);
         setCompanyName(companyName);
     }
 
