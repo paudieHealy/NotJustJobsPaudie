@@ -76,7 +76,7 @@ public class Member {
         {
             return "\nName: " + getName() + "\nCounty: " + getCounty() +
                     "\nUsernaem: " + getUsername() + "Password: " + getPassword() +
-                    "\nYear of birth: " + getYearOfBirth();
+                    "\nYear: " + getYearOfBirth();
         }
 
 }
