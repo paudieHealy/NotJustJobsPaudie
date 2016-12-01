@@ -27,11 +27,36 @@ public class RegisterMember {
             }
         }
 
+        String message = "";
+        for(Member m:member)
+            {
+                message+=m.toString();
+            }
+        JOptionPane.showMessageDialog(null,message);
+
+        searchCountyNumbers(member);
     }
 
-    public static void main(String [] args)
+    private void searchCountyNumbers(List<Member> member)
     {
-        RegisterMember regMem = new RegisterMember();
+        List<Member> countyCheck = new ArrayList<>();
+        for(Member m:member)
+        {
+            if(m.getCounty() == "Dublin")
+            {
+                countyCheck.add(m);
+            }
+        }
+
+
+        String message="";
+        Iterator<Member> it = countyCheck.iterator();
+
+        while(it.hasNext())
+        {
+            message+=it.next().toString();
+        }
+        JOptionPane.showMessageDialog(null,"Members from Dublin: " + message);
     }
 
     public  Member addMember()
@@ -123,6 +148,13 @@ public class RegisterMember {
         Business business = new Business(companyName,name,county,username,password, yearOfBirth);
         return business;
 
+    }
+
+
+
+    public static void main(String [] args)
+    {
+        RegisterMember regMem = new RegisterMember();
     }
 }
 
