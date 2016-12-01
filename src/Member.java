@@ -74,8 +74,8 @@ public class Member {
 
     public String toString()
         {
-            return "\nName: " + getName() + "\nCounty: " + getCounty() +
-                    "\nUsernaem: " + getUsername() + "Password: " + getPassword() +
+            return "\n\nName: " + getName() + "\nCounty: " + getCounty() +
+                    "\nUsernaem: " + getUsername() + "\nPassword: " + getPassword() +
                     "\nYear: " + getYearOfBirth();
         }
 
