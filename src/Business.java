@@ -31,9 +31,4 @@ public class Business extends Member{
         this.member = member;
     }
 
-    public String toString()
-    {
-        return "\nCompany Name: " + getCompanyName() + member.toString();
-    }
-
 }
