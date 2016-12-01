@@ -34,23 +34,23 @@ public class RegisterMember {
             }
         JOptionPane.showMessageDialog(null,message);
 
-        searchCountyNumbers(member);
+        searchCompanyYear(member);
     }
 
-    private void searchCountyNumbers(List<Member> member)
+    private void searchCompanyYear(List<Member> member)
     {
-        List<Member> countyCheck = new ArrayList<>();
+        List<Member> companyYear = new ArrayList<>();
         for(Member m:member)
         {
-            if(m.getCounty() == "Dublin")
+            if(m.getYearOfBirth() > 45)
             {
-                countyCheck.add(m);
+                companyYear.add(m);
             }
         }
 
 
         String message="";
-        Iterator<Member> it = countyCheck.iterator();
+        Iterator<Member> it = companyYear.iterator();
 
         while(it.hasNext())
         {
