@@ -56,7 +56,7 @@ public class RegisterMember {
         {
             message+=it.next().toString();
         }
-        JOptionPane.showMessageDialog(null,"Members from Dublin: " + message);
+        JOptionPane.showMessageDialog(null,"Companies from : " + message);
     }
 
     public  Member addMember()
