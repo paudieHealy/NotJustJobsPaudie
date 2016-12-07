@@ -145,7 +145,7 @@ public class RegisterMember {
                     Integer.parseInt(JOptionPane.showInputDialog("Please enter year formed: "));
                 }
 
-        Business business = new Business(companyName,name,county,username,password, yearOfBirth);
+        Business business = new Business(companyName,name,county,username,password, yearOfBirth, Provence.Munster, WorkType.Business);
         return business;
 
     }
