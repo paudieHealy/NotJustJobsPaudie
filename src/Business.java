@@ -3,12 +3,24 @@ public class Business extends Member{
     private String companyName;
     private Member member;
     private double companyRate;
+    private Provence provence;
+    private WorkType work;
 
     public Business(String companyName,String name, String county,
-                    String username, String password, int yearOfBirth)
+                    String username, String password, int yearOfBirth,Provence provence,WorkType work)
     {
         super(name,county,username,password, yearOfBirth);
-        setCompanyName(companyName);
+        this.provence = provence;
+        this.work = work;
+        this.companyName = companyName;
+    }
+
+    public Provence getProvence(){
+        return provence;
+    }
+
+    public WorkType getWorkType(){
+        return work;
     }
 
     public String getCompanyName()
