@@ -8,6 +8,7 @@ public class Member {
 
     public Member()
     {
+
         this.name = "Joe Bloggs";
         this.county = "Dublin";
         this.username = "username";
@@ -18,11 +19,11 @@ public class Member {
     public Member(String name, String county,
                   String username, String password, int yearOfBirth)
         {
-            setName(name);
-            setCounty(county);
-            setUsername(username);
-            setPassword(password);
-            setYearOfBirth(yearOfBirth);
+            this.name = name;
+            this.county = county;
+            this.username = username;
+            this.password = password;
+            this.yearOfBirth = yearOfBirth;
 
         }
 
