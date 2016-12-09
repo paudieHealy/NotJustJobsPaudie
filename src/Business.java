@@ -48,7 +48,7 @@ public class Business extends Member{
 
     public String toString()
     {
-        return "\n\nCompany Name: " + getCompanyName() + super.toString() +
+        return "\nCompany Name: " + getCompanyName() + super.toString() +
                 "\nProvence: " + getProvence() + "\nWork Type: " + getWorkType();
     }
 
