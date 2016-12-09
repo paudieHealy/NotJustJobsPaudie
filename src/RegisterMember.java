@@ -32,51 +32,29 @@ public class RegisterMember {
             {
                 message+=m.toString();
             }
-        JOptionPane.showMessageDialog(null,message);
+        JOptionPane.showMessageDialog(null,"New members to the system: \n" + message);
 
         searchMembers(member);
     }
 
     private void searchMembers(List<Member> member)
     {
-        List<Member> userNameCheck = new ArrayList<>();
+        List<Member> userCountyCheck = new ArrayList<>();
         for(Member m:member)
         {
-            if(m.getUsername() == "Paudie")
+            if(m.getCounty().equals("Kerry") && m.getYearOfBirth() < 1998)
             {
-                userNameCheck.add(m);
+                userCountyCheck.add(m);
             }
         }
-
-
         String message="";
-        Iterator<Member> it = userNameCheck.iterator();
+        Iterator<Member> it = userCountyCheck.iterator();
 
         while(it.hasNext())
         {
             message+=it.next().toString();
         }
-
-    }
-
-    private void searchCompanyYear(List<Business> business)
-    {
-        List<Business> provenceCheck = new ArrayList<>();
-        for(Business b:business)
-        {
-            if(b.getProvence() == "Munster" && b.getWorkType() == "Kerry")
-            {
-                provenceCheck.add(b);
-            }
-        }
-
-        String message="";
-        Iterator<Business> it = provenceCheck.iterator();
-
-        while(it.hasNext())
-        {
-            message+=it.next().toString();
-        }
+        JOptionPane.showMessageDialog(null,"Members in Kerry older than 18\n "+ message);
     }
 
     public  Member addMember()
