@@ -34,29 +34,49 @@ public class RegisterMember {
             }
         JOptionPane.showMessageDialog(null,message);
 
-        searchCompanyYear(member);
+        searchMembers(member);
     }
 
-    private void searchCompanyYear(List<Member> member)
+    private void searchMembers(List<Member> member)
     {
-        List<Member> companyYear = new ArrayList<>();
+        List<Member> userNameCheck = new ArrayList<>();
         for(Member m:member)
         {
-            if(m.getYearOfBirth() > 45)
+            if(m.getUsername() == "Paudie")
             {
-                companyYear.add(m);
+                userNameCheck.add(m);
             }
         }
 
 
         String message="";
-        Iterator<Member> it = companyYear.iterator();
+        Iterator<Member> it = userNameCheck.iterator();
 
         while(it.hasNext())
         {
             message+=it.next().toString();
         }
-        JOptionPane.showMessageDialog(null,"Companies from : " + message);
+
+    }
+
+    private void searchCompanyYear(List<Business> business)
+    {
+        List<Business> provenceCheck = new ArrayList<>();
+        for(Business b:business)
+        {
+            if(b.getProvence() == "Munster" && b.getWorkType() == "Kerry")
+            {
+                provenceCheck.add(b);
+            }
+        }
+
+        String message="";
+        Iterator<Business> it = provenceCheck.iterator();
+
+        while(it.hasNext())
+        {
+            message+=it.next().toString();
+        }
     }
 
     public  Member addMember()
@@ -108,6 +128,9 @@ public class RegisterMember {
         String username;
         String password;
         int yearOfBirth;
+        String provence;
+        String workType;
+
         companyName = JOptionPane.showInputDialog("Please enter your company name: ");
             if(companyName.equals(""))
                 {
@@ -144,8 +167,20 @@ public class RegisterMember {
                     JOptionPane.showConfirmDialog(null,"Please enter valid information!!");
                     Integer.parseInt(JOptionPane.showInputDialog("Please enter year formed: "));
                 }
+        provence = JOptionPane.showInputDialog("Please enter your provence: ");
+        if(provence.equals(""))
+        {
+            JOptionPane.showConfirmDialog(null,"Please enter valid information!!");
+            provence = JOptionPane.showInputDialog("Please enter your provence: ");
+        }
+        workType = JOptionPane.showInputDialog("Please enter the workType: ");
+        if(workType.equals(""))
+        {
+            JOptionPane.showConfirmDialog(null,"Please enter valid information!!");
+            workType = JOptionPane.showInputDialog("Please enter the workType: ");
+        }
 
-        Business business = new Business(companyName,name,county,username,password, yearOfBirth, Provence.Munster, WorkType.Business);
+        Business business = new Business(companyName,name,county,username,password,yearOfBirth,provence,workType);
         return business;
 
     }
