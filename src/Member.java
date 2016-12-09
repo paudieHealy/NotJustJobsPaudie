@@ -75,9 +75,9 @@ public class Member {
 
     public String toString()
         {
-            return "\n\nName: " + getName() + "\nCounty: " + getCounty() +
-                    "\nUsernaem: " + getUsername() + "\nPassword: " + getPassword() +
-                    "\nYear: " + getYearOfBirth();
+            return "\nName: " + getName() + "\nCounty: " + getCounty() +
+                    "\nUsername: " + getUsername() + "\nPassword: " + getPassword() +
+                    "\nYear: " + getYearOfBirth() + "\n";
         }
 
 }
